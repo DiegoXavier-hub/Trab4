@@ -1,0 +1,199 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #edf1ef;
+    color: #24313d;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.hero {
+    min-height: 330px;
+    padding: 64px 0 92px;
+    background-color: #15313b;
+    background-image:
+        linear-gradient(115deg, rgba(255, 255, 255, 0.08) 0, rgba(255, 255, 255, 0.08) 28%, transparent 28%),
+        linear-gradient(135deg, #15313b 0%, #245667 58%, #d88945 58%, #d88945 100%);
+    color: #fff;
+    border-bottom: 8px solid #e6b36a;
+}
+
+.hero-content,
+.page {
+    width: 86%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin: 0 0 18px;
+    padding: 8px 14px;
+    color: #15313b;
+    background: #f4d79b;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+}
+
+h1 {
+    max-width: 720px;
+    margin: 0;
+    font-size: 4rem;
+    line-height: 1.05;
+}
+
+.lead {
+    max-width: 650px;
+    margin: 22px 0 0;
+    color: #eaf4f3;
+    font-size: 1.25rem;
+}
+
+.page {
+    margin-top: -54px;
+    margin-bottom: 44px;
+}
+
+.intro,
+.rules {
+    padding: 30px 34px;
+    background: #fff;
+    border: 1px solid #d7dfdc;
+    border-radius: 8px;
+    box-shadow: 0 18px 42px rgba(21, 49, 59, 0.12);
+}
+
+.intro h2,
+.rules h2,
+.exercise-card h2 {
+    margin-top: 0;
+    color: #15313b;
+}
+
+.intro p,
+.rules p,
+.exercise-card p {
+    color: #52616d;
+}
+
+.exercise-list {
+    margin: 28px -1.25% 30px;
+    font-size: 0;
+}
+
+.exercise-card {
+    display: inline-block;
+    width: 47.5%;
+    min-height: 320px;
+    margin: 0 1.25% 26px;
+    padding: 30px;
+    vertical-align: top;
+    background: #fff;
+    border: 1px solid #d7dfdc;
+    border-radius: 8px;
+    box-shadow: 0 16px 34px rgba(21, 49, 59, 0.10);
+    font-size: 1rem;
+}
+
+.exercise-one {
+    border-top: 8px solid #2d7a6f;
+}
+
+.exercise-two {
+    border-top: 8px solid #c76e32;
+}
+
+.card-number {
+    display: inline-block;
+    margin: 0 0 26px;
+    padding: 8px 13px;
+    color: #fff;
+    background: #15313b;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 13px 18px;
+    color: #fff;
+    background: #15313b;
+    border: 2px solid #15313b;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button:hover,
+.button:focus {
+    color: #15313b;
+    background: #f4d79b;
+    border-color: #d88945;
+}
+
+.rules ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.rules li {
+    margin: 8px 0;
+}
+
+footer {
+    padding: 26px 8%;
+    color: #f1f7f6;
+    background: #15313b;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 760px) {
+    .hero {
+        min-height: 280px;
+        padding-top: 44px;
+    }
+
+    h1 {
+        font-size: 2.7rem;
+    }
+
+    .lead {
+        font-size: 1.05rem;
+    }
+
+    .page,
+    .hero-content {
+        width: 92%;
+    }
+
+    .intro,
+    .rules,
+    .exercise-card {
+        padding: 24px;
+    }
+
+    .exercise-list {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .exercise-card {
+        display: block;
+        width: 100%;
+        min-height: 0;
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário fictício de cadastro de cliente para o exercício 2 do Trabalho 04.">
+    <meta name="keywords" content="cadastro, cliente, formulário">
+    <meta name="author" content="Cadastro Online">
+    <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="topo">
+        <h1>Cadastro de Cliente</h1>
+        <p>Preencha o formulário abaixo para realizar seu cadastro. Os campos marcados com asterisco (*) são obrigatórios.</p>
+    </header>
+
+    <main>
+        <form action="cadastraCliente.php" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="origem" value="formulario_web_2026">
+
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <p class="campo campo-textual">
+                    <label for="nome">Nome (*):</label>
+                    <input type="text" id="nome" name="nome" minlength="2" maxlength="50" placeholder="Digite um nome fictício" required autofocus>
+                    <span class="estado-validacao" aria-hidden="true"></span>
+                </p>
+
+                <p class="campo campo-textual">
+                    <label for="email">E-mail (*):</label>
+                    <input type="email" id="email" name="email" maxlength="100" placeholder="cliente@example.com" required>
+                    <span class="estado-validacao" aria-hidden="true"></span>
+                </p>
+
+                <p class="campo campo-textual">
+                    <label for="cpf">CPF (*):</label>
+                    <input type="text" id="cpf" name="cpf" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" placeholder="000.000.000-00" maxlength="14" required>
+                    <span class="estado-validacao" aria-hidden="true"></span>
+                </p>
+
+                <p class="campo campo-textual">
+                    <label for="idade">Idade (*):</label>
+                    <input type="number" id="idade" name="idade" min="0" max="150" placeholder="18" required>
+                    <span class="estado-validacao" aria-hidden="true"></span>
+                </p>
+
+                <p class="campo campo-textual">
+                    <label for="telefone">Telefone (*):</label>
+                    <input type="tel" id="telefone" name="telefone" minlength="8" maxlength="20" placeholder="(00) 00000-0000" required>
+                    <span class="estado-validacao" aria-hidden="true"></span>
+                </p>
+
+                <p class="campo">
+                    <label for="datanascimento">Data de nascimento:</label>
+                    <input type="date" id="datanascimento" name="datanascimento">
+                </p>
+
+                <p class="grupo-opcoes">
+                    <span>Sexo:</span>
+                    <input type="radio" id="sexo-m" name="sexo" value="M">
+                    <label for="sexo-m">Masculino</label>
+                    <input type="radio" id="sexo-f" name="sexo" value="F">
+                    <label for="sexo-f">Feminino</label>
+                    <input type="radio" id="sexo-o" name="sexo" value="O">
+                    <label for="sexo-o">Outro</label>
+                    <input type="radio" id="sexo-n" name="sexo" value="N">
+                    <label for="sexo-n">Prefiro não informar</label>
+                </p>
+
+                <p class="campo">
+                    <label for="estadocivil">Estado civil:</label>
+                    <select id="estadocivil" name="estadocivil">
+                        <option value="">Selecione</option>
+                        <option value="solteiro">Solteiro(a)</option>
+                        <option value="casado">Casado(a)</option>
+                        <option value="divorciado">Divorciado(a)</option>
+                        <option value="viuvo">Viúvo(a)</option>
+                        <option value="uniao-estavel">União estável</option>
+                    </select>
+                </p>
+
+                <p class="campo campo-textual">
+                    <label for="codigocadastro">Código de cadastro:</label>
+                    <input type="text" id="codigocadastro" name="codigocadastro" value="CAD-2026-AUTO" readonly>
+                    <span class="estado-validacao" aria-hidden="true"></span>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Endereço de Entrega</legend>
+
+                <p class="campo campo-textual">
+                    <label for="cep">CEP (*):</label>
+                    <input type="text" id="cep" name="cep" pattern="[0-9]{5}-?[0-9]{3}" maxlength="9" placeholder="00000-000" required>
+                    <span class="estado-validacao" aria-hidden="true"></span>
+                </p>
+
+                <p class="campo">
+                    <label for="tipologradouro">Tipo de logradouro (*):</label>
+                    <select id="tipologradouro" name="tipologradouro" required>
+                        <option value="">Selecione</option>
+                        <option value="rua">Rua</option>
+                        <option value="avenida">Avenida</option>
+                        <option value="praca">Praça</option>
+                        <option value="alameda">Alameda</option>
+                        <option value="travessa">Travessa</option>
+                        <option value="rodovia">Rodovia</option>
+                        <option value="estrada">Estrada</option>
+                        <option value="largo">Largo</option>
+                    </select>
+                </p>
+
+                <p class="campo campo-textual">
+                    <label for="logradouro">Logradouro (*):</label>
+                    <input type="text" id="logradouro" name="logradouro" maxlength="120" placeholder="Rua fictícia" required>
+                    <span class="estado-validacao" aria-hidden="true"></span>
+                </p>
+
+                <p class="campo campo-textual">
+                    <label for="numero">Número:</label>
+                    <input type="text" id="numero" name="numero" maxlength="10" placeholder="100">
+                    <span class="estado-validacao" aria-hidden="true"></span>
+                </p>
+
+                <p class="campo campo-textual">
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" id="complemento" name="complemento" maxlength="60" placeholder="Bloco, sala ou referência">
+                    <span class="estado-validacao" aria-hidden="true"></span>
+                </p>
+
+                <p class="campo campo-textual">
+                    <label for="bairro">Bairro (*):</label>
+                    <input type="text" id="bairro" name="bairro" maxlength="60" placeholder="Bairro fictício" required>
+                    <span class="estado-validacao" aria-hidden="true"></span>
+                </p>
+
+                <p class="campo campo-textual">
+                    <label for="cidade">Cidade (*):</label>
+                    <input type="text" id="cidade" name="cidade" maxlength="60" placeholder="Cidade fictícia" required>
+                    <span class="estado-validacao" aria-hidden="true"></span>
+                </p>
+
+                <p class="campo">
+                    <label for="estado">Estado (*):</label>
+                    <select id="estado" name="estado" required>
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informações Adicionais</legend>
+
+                <p class="subtitulo">Campos de interesse:</p>
+
+                <p class="grupo-opcoes">
+                    <input type="checkbox" id="int-filmes" name="interesse_filmes" value="filmes">
+                    <label for="int-filmes">Filmes</label>
+                    <input type="checkbox" id="int-informatica" name="interesse_informatica" value="informatica">
+                    <label for="int-informatica">Informática</label>
+                    <input type="checkbox" id="int-games" name="interesse_games" value="games">
+                    <label for="int-games">Games</label>
+                    <input type="checkbox" id="int-livros" name="interesse_livros" value="livros">
+                    <label for="int-livros">Livros</label>
+                    <input type="checkbox" id="int-musica" name="interesse_musica" value="musica">
+                    <label for="int-musica">Música</label>
+                    <input type="checkbox" id="int-esportes" name="interesse_esportes" value="esportes">
+                    <label for="int-esportes">Esportes</label>
+                </p>
+
+                <p class="campo">
+                    <label for="comentarios">Informações complementares:</label>
+                    <textarea id="comentarios" name="comentarios" rows="6" cols="60" maxlength="1000" placeholder="Digite informações fictícias relevantes para o cadastro"></textarea>
+                </p>
+
+                <p class="campo">
+                    <label for="anexo">Anexar imagem:</label>
+                    <input type="file" id="anexo" name="anexo" accept="image/*">
+                </p>
+            </fieldset>
+
+            <p class="acoes">
+                <button type="submit">Cadastrar</button>
+                <button type="reset">Limpar</button>
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <address>Empresa Fictícia Ltda. - Uberlândia, MG</address>
+        <p><a href="../index.html">Voltar para o portal do Trabalho 04</a></p>
+    </footer>
+</body>
+</html>

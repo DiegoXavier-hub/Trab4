@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+    background: #e9eef0;
+    color: #2d3640;
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+#topo {
+    padding: 44px 8% 34px;
+    color: #fff;
+    background: #21465a;
+    border-bottom: 6px solid #d58b3d;
+    text-align: center;
+}
+
+#topo h1 {
+    margin: 0 0 12px;
+    font-size: 2.4rem;
+}
+
+#topo p {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+main {
+    width: 78%;
+    max-width: 980px;
+    margin: 34px auto;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid #cfdadc;
+    border-radius: 8px;
+    box-shadow: 0 16px 36px rgba(33, 70, 90, 0.14);
+}
+
+fieldset {
+    margin: 0 0 28px;
+    padding: 24px;
+    background: #f7faf9;
+    border: 2px solid #b8cac8;
+    border-radius: 8px;
+}
+
+legend {
+    padding: 7px 12px;
+    color: #fff;
+    background: #21465a;
+    border-radius: 6px;
+    font-weight: 700;
+}
+
+.campo {
+    margin: 18px 0;
+}
+
+.campo label {
+    display: inline-block;
+    width: 190px;
+    margin-right: 10px;
+    font-weight: 700;
+    vertical-align: top;
+}
+
+input,
+select,
+textarea {
+    max-width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #9dafb2;
+    border-radius: 6px;
+    color: #2d3640;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 320px;
+}
+
+textarea {
+    width: 520px;
+}
+
+input[required],
+select[required] {
+    background: #fff8df;
+}
+
+.campo-textual input:valid {
+    background: #e8f7ee;
+    border-color: #429963;
+}
+
+.campo-textual input:invalid {
+    background: #fdebea;
+    border-color: #c6534b;
+}
+
+.campo-textual input:placeholder-shown {
+    background: #fff8df;
+}
+
+.estado-validacao::before {
+    display: inline-block;
+    width: 24px;
+    margin-left: 8px;
+    font-weight: 700;
+}
+
+.campo-textual input:valid + .estado-validacao::before {
+    content: "✓";
+    color: #25784a;
+}
+
+.campo-textual input:invalid + .estado-validacao::before {
+    content: "✖";
+    color: #b23932;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #6d7d82;
+    font-style: italic;
+}
+
+.grupo-opcoes {
+    padding: 12px;
+    background: #eef4f3;
+    border-left: 5px solid #d58b3d;
+    border-radius: 6px;
+}
+
+.grupo-opcoes label {
+    margin-right: 16px;
+}
+
+.subtitulo {
+    color: #21465a;
+    font-weight: 700;
+}
+
+button {
+    padding: 12px 20px;
+    color: #fff;
+    background: #21465a;
+    border: 2px solid #21465a;
+    border-radius: 7px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    color: #21465a;
+    background: #f3d08b;
+    border-color: #d58b3d;
+}
+
+.acoes {
+    text-align: center;
+}
+
+footer {
+    padding: 24px 8%;
+    color: #fff;
+    background: #21465a;
+    text-align: center;
+}
+
+footer address {
+    font-style: normal;
+}
+
+footer a:link,
+footer a:visited {
+    color: #f3d08b;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #fff;
+}
+
+@media (max-width: 760px) {
+    main {
+        width: 92%;
+        padding: 18px;
+    }
+
+    .campo label {
+        display: block;
+        width: auto;
+        margin: 0 0 6px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea {
+        width: 100%;
+    }
+
+    .estado-validacao::before {
+        margin-top: 6px;
+        margin-left: 0;
+    }
+}
